@@ -4,11 +4,11 @@ var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: 'root',
-	database: 'test'
+	database: 'cohort'
 });
 
 var selectAll = function(callback) {
-	connection.query('SELECT * FROM items', function(err, results, fields) {
+	connection.query('SELECT * FROM profiles', function(err, results, fields) {
 		if (err) {
 			callback(err, null);
 		} else {

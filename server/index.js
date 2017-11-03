@@ -1,13 +1,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var items = require('../database');
+var profiles = require('./db');
 
 var app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/items', function(req, res) {
-	items.selectAll(function(err, data) {
+app.get('/profiles', function(req, res) {
+	profiles.selectAll(function(err, data) {
 		if (err) {
 			res.sendStatus(500);
 		} else {
