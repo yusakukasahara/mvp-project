@@ -1,11 +1,11 @@
-// import React from 'react';
-// import Profile from './Profile.jsx';
+import React from 'react';
+import Profile from './Profile.jsx';
 
-const Cohort = props => (
+const Profiles = props => (
 	<div>
-		<h4> Cohort Introductions </h4>
-		There are {props.items.length} students.
-		{props.items.map(item => <Profile item={item} />)}
+		<h4>Profiles</h4>
+		There are {props.profiles.length} students.
+		{props.profiles.map(profile => <Profile profile={profile} />)}
 	</div>
 );
 

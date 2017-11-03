@@ -5,6 +5,7 @@ var profiles = require('./db');
 var app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));
+// app.use('/node_modules', express.static(__dirname + '../node_modules'));
 
 app.get('/profiles', function(req, res) {
 	profiles.selectAll(function(err, data) {
