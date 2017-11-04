@@ -3,8 +3,6 @@ var db = require('../db');
 module.exports = {
 	profiles: {
 		get: function(callback) {
-			// fetch all messages
-			// text, username, roomname, id
 			var queryStr =
 				'select profile.name, profile.origin, profile.history, profile.interests, profile.experience, profile.fact1, profile.fact2, profile.fact3, profile.photourl \
                       from profiles  \
@@ -14,7 +12,6 @@ module.exports = {
 			});
 		},
 		post: function(params, callback) {
-			// create a message for a user id based on the given username
 			var queryStr =
 				'insert into profile(name, origin, history, interests, experience, fact1, fact2, fact3, photourl) \
                       value (?, ?, ?, ?, ?, ?, ?, ?, ?)';

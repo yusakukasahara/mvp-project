@@ -1017,6 +1017,14 @@ var App = function (_React$Component) {
 			});
 		}
 	}, {
+		key: 'handleInputChange',
+		value: function handleInputChange(e) {
+			this.props.handleSearchInputChange(e.target.value);
+			this.setState({
+				value: e.target.value
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -1028,54 +1036,97 @@ var App = function (_React$Component) {
 					'Cohort Introductions!'
 				),
 				_react2.default.createElement(
-					'form',
+					'label',
 					null,
-					_react2.default.createElement(
-						'label',
-						null,
-						'Name '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'name', value: '' }),
-					_react2.default.createElement(
-						'label',
-						null,
-						'Where are you from? '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'origin', value: '' }),
-					_react2.default.createElement(
-						'label',
-						null,
-						'What were you up to before HR? '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'history', value: '' }),
-					_react2.default.createElement(
-						'label',
-						null,
-						'What are your tech Interests? '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'interests', value: '' }),
-					_react2.default.createElement(
-						'label',
-						null,
-						'Do you have any coding experience? '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'experience', value: '' }),
-					_react2.default.createElement(
-						'label',
-						null,
-						'Share three interesting facts about yourself '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'fact1', value: '' }),
-					_react2.default.createElement('input', { type: 'text', name: 'fact2', value: '' }),
-					_react2.default.createElement('input', { type: 'text', name: 'fact3', value: '' }),
-					_react2.default.createElement(
-						'label',
-						null,
-						'URL link of photo '
-					),
-					_react2.default.createElement('input', { type: 'text', name: 'fact3', value: '' }),
-					_react2.default.createElement('input', { type: 'submit', value: 'Submit' })
+					'Name '
 				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'label',
+					null,
+					'Where are you from? '
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'label',
+					null,
+					'What were you up to before HR? '
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'label',
+					null,
+					'What are your tech Interests? '
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'label',
+					null,
+					'Do you have any coding experience? '
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement(
+					'label',
+					null,
+					'Share three interesting facts about yourself '
+				),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
+				_react2.default.createElement('input', {
+					className: 'form-control',
+					type: 'text',
+					value: this.state.value,
+					onChange: this.handleInputChange.bind(this)
+				}),
+				_react2.default.createElement('br', null),
 				_react2.default.createElement(_Profiles2.default, { profiles: this.state.profiles })
 			);
 		}

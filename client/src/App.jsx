@@ -25,30 +25,90 @@ class App extends React.Component {
 		});
 	}
 
+	handleInputChange(e) {
+		this.props.handleSearchInputChange(e.target.value);
+		this.setState({
+			value: e.target.value
+		});
+	}
+
 	render() {
 		return (
 			<div>
 				<h1>Cohort Introductions!</h1>
+				<label>Name </label>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
 
-				<form>
-					<label>Name </label>
-					<input type="text" name="name" value="" />
-					<label>Where are you from? </label>
-					<input type="text" name="origin" value="" />
-					<label>What were you up to before HR? </label>
-					<input type="text" name="history" value="" />
-					<label>What are your tech Interests? </label>
-					<input type="text" name="interests" value="" />
-					<label>Do you have any coding experience? </label>
-					<input type="text" name="experience" value="" />
-					<label>Share three interesting facts about yourself </label>
-					<input type="text" name="fact1" value="" />
-					<input type="text" name="fact2" value="" />
-					<input type="text" name="fact3" value="" />
-					<label>URL link of photo </label>
-					<input type="text" name="fact3" value="" />
-					<input type="submit" value="Submit" />
-				</form>
+				<label>Where are you from? </label>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
+
+				<label>What were you up to before HR? </label>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
+
+				<label>What are your tech Interests? </label>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
+
+				<label>Do you have any coding experience? </label>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
+
+				<label>Share three interesting facts about yourself </label>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
+				<input
+					className="form-control"
+					type="text"
+					value={this.state.value}
+					onChange={this.handleInputChange.bind(this)}
+				/>
+				<br />
 				<Profiles profiles={this.state.profiles} />
 			</div>
 		);
