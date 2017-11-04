@@ -1,3 +1,37 @@
+//models
+var db = require('./db.js');
+
+exports.profiles = {
+	get: function(req, res) {
+		db.Cohort.find({}).then(data => res.send(data));
+	},
+
+	post: function(req, res) {
+		console.log(req.body);
+		db.Cohort.create(
+			{
+				name: req.body.name,
+				origin: req.body.origin,
+				previously: req.body.previously,
+				interests: req.body.interests,
+				experience: req.body.experience,
+				fact1: req.body.fact1,
+				fact2: req.body.fact2,
+				fact3: req.body.fact3,
+				photourl: req.body.photourl
+			},
+			function(err, result) {
+				if (err) {
+					console.error(err);
+					return;
+				}
+				res.send(`Profile added!`);
+			}
+		);
+	}
+};
+
+/*
 var db = require('../db');
 
 module.exports = {
@@ -21,3 +55,4 @@ module.exports = {
 		}
 	}
 };
+*/
