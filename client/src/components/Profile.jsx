@@ -9,15 +9,20 @@ const Profile = props => {
 			<div className="profile-details">
 				<h3>Name</h3>
 				<div>{props.profile.name}</div>
-				<h3>Where am I from: {props.profile.origin}</h3>
-				<h3>What was I up to before HR: {props.profile.previously}</h3>
-				<h3>Tech Interests: {props.profile.interests}</h3>
-				<h3>Coding Experience: {props.profile.experience}</h3>
-				<h3>3 Interesting facts about myself:</h3>
-				<h3>1. {props.profile.fact1}</h3>
-				<h3>2. {props.profile.fact2}</h3>
-				<h3>3. {props.profile.fact3}</h3>
+				<h3>Where am I from:</h3>
+				<div>{props.profile.origin}</div>
+				<h3>What was I up to before HR:</h3>
+				<div>{props.profile.previously}</div>
+				<h3>Tech Interests:</h3>
+				<div>{props.profile.interests}</div>
+				<h3>Coding Experience:</h3>
+				<div>{props.profile.experience}</div>
+				<h3>Interesting facts about myself:</h3>
+				<div>{props.profile.fact1}</div>
+				<div>{props.profile.fact2}</div>
+				<div>{props.profile.fact3}</div>
 			</div>
+			<br />
 		</div>
 	);
 };

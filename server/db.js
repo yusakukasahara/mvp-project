@@ -2,7 +2,7 @@ var db = require('mongoose');
 
 db.connect('mongodb://admin:pass@ds147265.mlab.com:47265/cohort');
 
-let cohortSchema = new db.Schema(
+var cohortSchema = new db.Schema(
 	{
 		name: {
 			type: String,

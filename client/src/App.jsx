@@ -22,8 +22,6 @@ class App extends React.Component {
 		};
 		this.submitProfile = this.submitProfile.bind(this);
 		this.handleInputChange = this.handleInputChange.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	componentDidMount() {
@@ -42,29 +40,7 @@ class App extends React.Component {
 
 	handleInputChange(event) {
 		this.setState({ [event.target.name]: event.target.value });
-		console.log(this.state);
-		// this.props.handleSubmit(event.target.value);
-		// this.setState({ value: event.target.value });
 	}
-
-	handleChange(event) {
-		// alert('Submitted: ' + this.state.value);
-		// this.setState({ value: event.target.value });
-	}
-
-	handleSubmit(event) {
-		// alert('Submitted: ' + this.state.value);
-		// event.preventDefault();
-	}
-	//
-	// handleInputChange(e) {
-	// 	e.preventDefault();
-	// 	let value = e.target.value;
-	// 	let name = e.target.name;
-	// 	this.setState({
-	// 		[name]: value
-	// 	});
-	// }
 
 	submitProfile(e) {
 		e.preventDefault();
@@ -114,7 +90,7 @@ class App extends React.Component {
 					<br />
 					<input
 						name="previously"
-						type="text"
+						type="textarea"
 						value={this.state.previously}
 						onChange={this.handleInputChange}
 					/>
@@ -124,7 +100,7 @@ class App extends React.Component {
 					<br />
 					<input
 						name="interests"
-						type="text"
+						type="textarea"
 						value={this.state.interests}
 						onChange={this.handleInputChange}
 					/>
@@ -134,7 +110,7 @@ class App extends React.Component {
 					<br />
 					<input
 						name="experience"
-						type="text"
+						type="textarea"
 						value={this.state.experience}
 						onChange={this.handleInputChange}
 					/>
@@ -144,21 +120,21 @@ class App extends React.Component {
 					<br />
 					<input
 						name="fact1"
-						type="text"
+						type="textarea"
 						value={this.state.fact1}
 						onChange={this.handleInputChange}
 					/>
 					<br />
 					<input
 						name="fact2"
-						type="text"
+						type="textarea"
 						value={this.state.fact2}
 						onChange={this.handleInputChange}
 					/>
 					<br />
 					<input
 						name="fact3"
-						type="text"
+						type="textarea"
 						value={this.state.fact3}
 						onChange={this.handleInputChange}
 					/>

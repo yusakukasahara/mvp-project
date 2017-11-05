@@ -9,4 +9,3 @@ const Profiles = props => (
 );
 
 export default Profiles;
-// There are {Object.keys(props.profiles).length} students.

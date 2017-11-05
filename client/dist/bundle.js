@@ -1694,8 +1694,6 @@ var App = function (_React$Component) {
 		};
 		_this.submitProfile = _this.submitProfile.bind(_this);
 		_this.handleInputChange = _this.handleInputChange.bind(_this);
-		_this.handleChange = _this.handleChange.bind(_this);
-		_this.handleSubmit = _this.handleSubmit.bind(_this);
 		return _this;
 	}
 
@@ -1720,32 +1718,7 @@ var App = function (_React$Component) {
 		key: 'handleInputChange',
 		value: function handleInputChange(event) {
 			this.setState(_defineProperty({}, event.target.name, event.target.value));
-			console.log(this.state);
-			// this.props.handleSubmit(event.target.value);
-			// this.setState({ value: event.target.value });
 		}
-	}, {
-		key: 'handleChange',
-		value: function handleChange(event) {
-			// alert('Submitted: ' + this.state.value);
-			// this.setState({ value: event.target.value });
-		}
-	}, {
-		key: 'handleSubmit',
-		value: function handleSubmit(event) {}
-		// alert('Submitted: ' + this.state.value);
-		// event.preventDefault();
-
-		//
-		// handleInputChange(e) {
-		// 	e.preventDefault();
-		// 	let value = e.target.value;
-		// 	let name = e.target.name;
-		// 	this.setState({
-		// 		[name]: value
-		// 	});
-		// }
-
 	}, {
 		key: 'submitProfile',
 		value: function submitProfile(e) {
@@ -1814,7 +1787,7 @@ var App = function (_React$Component) {
 					_react2.default.createElement('br', null),
 					_react2.default.createElement('input', {
 						name: 'previously',
-						type: 'text',
+						type: 'textarea',
 						value: this.state.previously,
 						onChange: this.handleInputChange
 					}),
@@ -1827,7 +1800,7 @@ var App = function (_React$Component) {
 					_react2.default.createElement('br', null),
 					_react2.default.createElement('input', {
 						name: 'interests',
-						type: 'text',
+						type: 'textarea',
 						value: this.state.interests,
 						onChange: this.handleInputChange
 					}),
@@ -1840,7 +1813,7 @@ var App = function (_React$Component) {
 					_react2.default.createElement('br', null),
 					_react2.default.createElement('input', {
 						name: 'experience',
-						type: 'text',
+						type: 'textarea',
 						value: this.state.experience,
 						onChange: this.handleInputChange
 					}),
@@ -1853,21 +1826,21 @@ var App = function (_React$Component) {
 					_react2.default.createElement('br', null),
 					_react2.default.createElement('input', {
 						name: 'fact1',
-						type: 'text',
+						type: 'textarea',
 						value: this.state.fact1,
 						onChange: this.handleInputChange
 					}),
 					_react2.default.createElement('br', null),
 					_react2.default.createElement('input', {
 						name: 'fact2',
-						type: 'text',
+						type: 'textarea',
 						value: this.state.fact2,
 						onChange: this.handleInputChange
 					}),
 					_react2.default.createElement('br', null),
 					_react2.default.createElement('input', {
 						name: 'fact3',
-						type: 'text',
+						type: 'textarea',
 						value: this.state.fact3,
 						onChange: this.handleInputChange
 					}),
@@ -32392,7 +32365,6 @@ var Profiles = function Profiles(props) {
 };
 
 exports.default = Profiles;
-// There are {Object.keys(props.profiles).length} students.
 
 /***/ }),
 /* 41 */
@@ -32436,51 +32408,65 @@ var Profile = function Profile(props) {
 			_react2.default.createElement(
 				"h3",
 				null,
-				"Where am I from: ",
+				"Where am I from:"
+			),
+			_react2.default.createElement(
+				"div",
+				null,
 				props.profile.origin
 			),
 			_react2.default.createElement(
 				"h3",
 				null,
-				"What was I up to before HR: ",
+				"What was I up to before HR:"
+			),
+			_react2.default.createElement(
+				"div",
+				null,
 				props.profile.previously
 			),
 			_react2.default.createElement(
 				"h3",
 				null,
-				"Tech Interests: ",
+				"Tech Interests:"
+			),
+			_react2.default.createElement(
+				"div",
+				null,
 				props.profile.interests
 			),
 			_react2.default.createElement(
 				"h3",
 				null,
-				"Coding Experience: ",
+				"Coding Experience:"
+			),
+			_react2.default.createElement(
+				"div",
+				null,
 				props.profile.experience
 			),
 			_react2.default.createElement(
 				"h3",
 				null,
-				"3 Interesting facts about myself:"
+				"Interesting facts about myself:"
 			),
 			_react2.default.createElement(
-				"h3",
+				"div",
 				null,
-				"1. ",
 				props.profile.fact1
 			),
 			_react2.default.createElement(
-				"h3",
+				"div",
 				null,
-				"2. ",
 				props.profile.fact2
 			),
 			_react2.default.createElement(
-				"h3",
+				"div",
 				null,
-				"3. ",
 				props.profile.fact3
 			)
-		)
+		),
+		_react2.default.createElement("br", null)
 	);
 };
 
